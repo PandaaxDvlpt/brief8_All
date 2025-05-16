@@ -44,8 +44,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    
 }
 
+body {
+    background-color: var(--color-bg);
+}
 .navbar {
     background-color: var(--color-ocean);
     padding: 30px 20px;
@@ -157,6 +162,14 @@
 
     .hamburger.active span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .section-bg h1 {
+        font-size: 1rem;
+    }
+
+    .section-bg p {
+        font-size: 1rem;
     }
 }
 
