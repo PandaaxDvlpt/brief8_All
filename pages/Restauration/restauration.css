@@ -128,28 +128,3 @@ footer {
   overflow: hidden;
   line-height: 0;
 }
-
-.wave {
-  background: url('https://svgshare.com/i/xV3.svg') repeat-x;
-  position: absolute;
-  width: 200%;
-  height: 100%;
-  animation: wave 10s linear infinite;
-  opacity: 0.4;
-}
-
-.wave:nth-child(2) {
-  top: 0;
-  animation: wave 15s linear infinite reverse;
-  opacity: 0.2;
-}
-
-@keyframes wave {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
