@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Alizéa lounge</title>
+  <link rel="stylesheet" href="./restauration.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Menu Alizéa Lounge</h1>
+    <div class="icons">
+      <i class="fas fa-shopping-cart icon" id="cartIcon" title="Panier"></i>
+      <i class="fas fa-calendar-check icon" id="resIcon" title="Réservation"></i>
+    </div>
+  </header>
+
+  <section class="opening-hours">
+    <h2>Horaires d'ouverture</h2>
+    <p>Lundi - Dimanche : 11h00 - 23h00</p>
+  </section>
+
+  <section class="menu">
+    <article class="menu-item">
+      <img src="./img/poisson crue.jpg" alt="Poisson cru à la tahitienne">
+      <div class="info">
+        <h3>Poisson cru à la tahitienne</h3>
+        <p class="price">18 €</p>
+        <button class="btn">Ajouter au panier</button>
+        <button class="btn reserve">Réserver</button>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="./img/poulet a la tahitienne.jpg" alt="Poulet fafa">
+      <div class="info">
+        <h3>Poulet fafa</h3>
+        <p class="price">16 €</p>
+        <button class="btn">Ajouter au panier</button>
+        <button class="btn reserve">Réserver</button>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="./img/dessert coco.jpg" alt="Dessert coco-ananas">
+      <div class="info">
+        <h3>Dessert coco-ananas</h3>
+        <p class="price">9 €</p>
+        <button class="btn">Ajouter au panier</button>
+        <button class="btn reserve">Réserver</button>
+      </div>
+    </article>
+  </section>
+
+  <!-- Audio -->
+  <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-09.mp3" preload="auto"></audio>
+
+  <script>
+    const icons = document.querySelectorAll('.icon');
+    const sound = document.getElementById('clickSound');
+
+    icons.forEach(icon => {
+      icon.addEventListener('click', () => {
+        icon.classList.add('clicked');
+        sound.play();
+        setTimeout(() => {
+          icon.classList.remove('clicked');
+        }, 300);
+      });
+    });
+  </script>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <h2>Découvrez Alizéa</h2>
+    <p>Le paradis vous attend – Plages, lagons et culture polynésienne</p>
+    <p>&copy; 2025 Bora Bora Expériences. Tous droits réservés.</p>
+  </div>
+  <div class="wave-animation">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

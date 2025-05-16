@@ -1,0 +1,155 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+header {
+  background-color: #0077be;
+  color: white;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.icons {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.icon {
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon.clicked {
+  transform: scale(1.4);
+  color: gold;
+}
+
+.opening-hours {
+  text-align: center;
+  background: #ffe8cc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 15px;
+  text-align: center;
+}
+
+.price {
+  font-weight: bold;
+  color: #0077be;
+  margin-top: 5px;
+}
+
+.btn {
+  margin: 8px 5px 0;
+  padding: 10px 15px;
+  border: none;
+  background-color: #0077be;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background-color: #005f99;
+}
+
+.reserve {
+  background-color: #ffa94d;
+}
+
+.reserve:hover {
+  background-color: #e88a1c;
+}
+
+footer {
+  position: relative;
+  background: #0066cc;
+  color: white;
+  text-align: center;
+  padding: 40px 20px 60px;
+  overflow: hidden;
+}
+
+.footer-content h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Waves */
+.wave-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave {
+  background: url('https://svgshare.com/i/xV3.svg') repeat-x;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s linear infinite;
+  opacity: 0.4;
+}
+
+.wave:nth-child(2) {
+  top: 0;
+  animation: wave 15s linear infinite reverse;
+  opacity: 0.2;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
