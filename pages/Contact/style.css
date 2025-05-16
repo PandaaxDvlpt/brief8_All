@@ -1,0 +1,146 @@
+/* Réinitialisation de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;  /* Empêche le défilement horizontal */
+}
+
+/* Image de fond */
+body {
+    background-image: url(/pages/Contact/img_BG/Background_Contact.jpg);
+background-size: cover;
+background-position: center;
+background-blur: 10px;  /* Vous pouvez utiliser 'backdrop-filter: blur(10px)' si vous avez un élément flou en superposition */
+
+}
+
+/* Conteneur centré */
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 2s ease-in-out; /* Animation du conteneur */
+}
+
+/* Formulaire avec fond flou */
+.contact-form {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: #fff;
+  opacity: 0;
+  animation: formFadeIn 2s ease-in-out forwards; /* Animation pour le formulaire */
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  animation: textSlideIn 1.5s ease-in-out; /* Animation du titre */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: transform 0.3s, opacity 0.3s; /* Animation au survol */
+}
+
+.contact-form button:hover {
+  transform: scale(1.1); /* Légère augmentation de la taille du bouton */
+  opacity: 0.9; /* Opacité réduite */
+}
+
+.contact-form .home-button {
+  display: block;
+  text-align: center;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.contact-form .home-button:hover {
+  color: #FFD700; /* Changement de couleur au survol */
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  animation: footerSlideIn 2s ease-in-out; /* Animation pour le footer */
+}
+
+/* Animations CSS */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes formFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes footerSlideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
