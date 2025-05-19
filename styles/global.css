@@ -228,6 +228,7 @@ body {
     text-align: center;
     margin-bottom: 60px;
     position: relative;
+    margin-top: 20px;
 }
 
 .section-title::after {
@@ -632,9 +633,7 @@ input:checked + .slider .moon-icon {
     font-size: 0.95rem;
 }
 
-/* Media Queries */
 @media screen and (max-width: 992px) {
-    /* Section About */
     .section-about-text {
         flex-direction: column;
         text-align: center;
@@ -705,12 +704,12 @@ input:checked + .slider .moon-icon {
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    /* Theme Switch */
+    
     .theme-switch-wrapper {
         left: 80px;
     }
 
-    /* Section Background */
+    
     .section-bg-content h1 {
         font-size: 2.5rem;
     }
@@ -737,6 +736,189 @@ input:checked + .slider .moon-icon {
     .avis-content {
         grid-template-columns: 1fr;
         max-width: 400px;
+    }
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(
+        90deg,
+        var(--color-ocean) 0%,
+        var(--color-wave) 25%,
+        var(--color-sun) 50%,
+        var(--color-wave) 75%,
+        var(--color-ocean) 100%
+    );
+    border-radius: 17px;
+    z-index: -1;
+    animation: borderRotate 3s linear infinite;
+    background-size: 200% 100%;
+}
+
+.contact-form::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: white;
+    border-radius: 13px;
+    z-index: -1;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-heading);
+    font-weight: 500;
+    transition: var(--trans-03);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: var(--trans-03);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-ocean);
+    box-shadow: 0 0 0 3px rgba(75, 166, 167, 0.1);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-muted);
+}
+
+.form-group .floating-label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-muted);
+    pointer-events: none;
+    transition: var(--trans-03);
+}
+
+.form-group input:focus + .floating-label,
+.form-group input:not(:placeholder-shown) + .floating-label {
+    top: 0;
+    left: 10px;
+    font-size: 0.85rem;
+    background: white;
+    padding: 0 5px;
+    color: var(--color-ocean);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, var(--color-ocean), var(--color-wave));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--trans-03);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: var(--trans-03);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(75, 166, 167, 0.3);
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Animation de succès */
+@keyframes successShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.form-success {
+    animation: successShake 0.5s ease-in-out;
+}
+
+.validation-message {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 0.85rem;
+    color: var(--color-ocean);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: var(--trans-03);
+}
+
+.validation-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.validation-message.error {
+    color: #ff6b6b;
+}
+
+/* Responsive du formulaire */
+@media screen and (max-width: 768px) {
+    .contact-form {
+        padding: 30px 20px;
+        margin: 0 20px;
     }
 }
 
