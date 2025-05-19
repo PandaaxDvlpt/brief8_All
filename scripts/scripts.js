@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         champs.forEach(champ => {
             champ.addEventListener('input', verifierChamp);
-            
             champ.addEventListener('blur', verifierChamp);
         });
 
