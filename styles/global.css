@@ -623,7 +623,6 @@ input:checked + .slider .moon-icon {
     color: var(--color-text);
     font-style: italic;
     line-height: 1.6;
-    margin-top: 15px;
     font-size: 0.95rem;
 }
 
@@ -927,3 +926,45 @@ input:checked + .slider .moon-icon {
     color: white;
     font-weight: 500;
 }
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icons svg {
+    filter: drop-shadow(0 0 5px white);
+    cursor: pointer;
+    transition: var(--trans-03);
+}
+
+.icons svg:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px var(--color-sun));
+    transition: var(--trans-03);
+}
+
+#rating {
+    margin-top: 0;
+    font-weight: 500; 
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.sunid {
+    font-weight: 500;
+    color: var(--color-sun);
+}
+
+.footer-text-bold {
+    font-weight: 500;
+    color: var(--color-sun);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+

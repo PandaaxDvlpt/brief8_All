@@ -53,7 +53,7 @@ async function displayData() {
     
     const averageRating = allRatings.reduce((acc, curr) => acc + curr, 0) / allRatings.length;
     const ratingElement = document.getElementById('rating');
-    ratingElement.textContent = `Note moyenne : ${averageRating.toFixed(1)} ★`;
+    ratingElement.innerHTML = `Note moyenne : ` + `<span class="sunid">${averageRating.toFixed(1)} ★</span>`;
 }
 
 displayData();

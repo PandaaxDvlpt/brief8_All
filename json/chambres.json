@@ -1,0 +1,130 @@
+{
+  "chambres": [
+    {
+      "id": 1,
+      "nom": "La Crique Écologique",
+      "description": "Une chambre paisible inspirée des criques méditerranéennes, entièrement conçue avec des matériaux recyclés et durables.",
+      "prix": 120,
+      "capacite": 2,
+      "equipements": [
+        "Lit en bois recyclé",
+        "Matelas en latex naturel",
+        "Draps en coton bio",
+        "Éclairage LED basse consommation",
+        "Ventilateur de plafond en bambou",
+        "Salle de bain avec douche à économie d'eau"
+      ],
+      "points_verts": [
+        "Matériaux 100% recyclés",
+        "Énergie solaire",
+        "Produits d'accueil bio",
+        "Tri sélectif"
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "Le Refuge des Marées",
+      "description": "Une chambre apaisante aux tons bleus et sable, offrant une vue imprenable sur l'océan et utilisant l'énergie des marées.",
+      "prix": 150,
+      "capacite": 2,
+      "equipements": [
+        "Mobilier en bois flotté",
+        "Décoration en coquillages recyclés",
+        "Système de récupération d'eau de pluie",
+        "Climatisation naturelle",
+        "Baignoire en pierre naturelle",
+        "Terrase privative avec vue mer"
+      ],
+      "points_verts": [
+        "Énergie marémotrice",
+        "Récupération d'eau de pluie",
+        "Mobilier upcyclé",
+        "Produits locaux"
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "L'Abri des Coraux",
+      "description": "Une chambre colorée inspirée des récifs coralliens, construite avec des matériaux respectueux de l'environnement marin.",
+      "prix": 180,
+      "capacite": 3,
+      "equipements": [
+        "Lit king-size en bois certifié FSC",
+        "Décoration murale en corail artificiel",
+        "Système de purification d'air naturel",
+        "Douche à pluie économe",
+        "Mini-cuisine équipée",
+        "Balcon avec vue panoramique"
+      ],
+      "points_verts": [
+        "Bois certifié FSC",
+        "Éclairage intelligent",
+        "Produits d'entretien écologiques",
+        "Participation à la protection des coraux"
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "La Cabane des Algues",
+      "description": "Une chambre innovante utilisant les algues comme matériau isolant naturel, offrant une expérience unique en harmonie avec la mer.",
+      "prix": 140,
+      "capacite": 2,
+      "equipements": [
+        "Isolation en algues marines",
+        "Mobilier en bois de récupération",
+        "Système de ventilation naturelle",
+        "Douche à faible débit",
+        "Décoration en algues séchées",
+        "Terrasse privative"
+      ],
+      "points_verts": [
+        "Isolation naturelle",
+        "Énergie éolienne",
+        "Compostage",
+        "Produits locaux"
+      ]
+    },
+    {
+      "id": 5,
+      "nom": "Le Nid de Posidonie",
+      "description": "Une chambre inspirée des herbiers de posidonie, utilisant des matériaux biodégradables et des techniques de construction durables.",
+      "prix": 160,
+      "capacite": 2,
+      "equipements": [
+        "Lit en bambou",
+        "Matelas en fibre de posidonie",
+        "Décoration en matériaux marins recyclés",
+        "Système de climatisation passive",
+        "Salle de bain écologique",
+        "Jardin privatif"
+      ],
+      "points_verts": [
+        "Matériaux biodégradables",
+        "Énergie solaire",
+        "Récupération d'eau",
+        "Protection des herbiers"
+      ]
+    },
+    {
+      "id": 6,
+      "nom": "La Grotte Marine",
+      "description": "Une chambre unique creusée dans la roche naturelle, offrant une expérience immersive tout en respectant l'environnement.",
+      "prix": 200,
+      "capacite": 4,
+      "equipements": [
+        "Lit en pierre naturelle",
+        "Décoration en coquillages et galets",
+        "Système de géothermie",
+        "Baignoire en pierre",
+        "Espace détente",
+        "Vue panoramique sur l'océan"
+      ],
+      "points_verts": [
+        "Construction naturelle",
+        "Énergie géothermique",
+        "Éclairage naturel",
+        "Protection du littoral"
+      ]
+    }
+  ]
+}
