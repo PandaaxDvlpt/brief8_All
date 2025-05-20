@@ -25,7 +25,7 @@
     {
       "id": 2,
       "nom": "Le Refuge des Marées",
-      "image": "../assets/chambre-1.png",
+      "image": "../assets/chambre-2.png",
       "description": "Une chambre apaisante aux tons bleus et sable, offrant une vue imprenable sur l'océan et utilisant l'énergie des marées.",
       "prix": 150,
       "capacite": 2,
@@ -46,7 +46,7 @@
     },
     {
       "id": 3,
-      "image": "../assets/chambre-1.png",
+      "image": "../assets/chambre-3.png",
       "nom": "L'Abri des Coraux",
       "description": "Une chambre colorée inspirée des récifs coralliens, construite avec des matériaux respectueux de l'environnement marin.",
       "prix": 180,
@@ -69,7 +69,7 @@
     {
       "id": 4,
       "nom": "La Cabane des Algues",
-      "image": "../assets/chambre-1.png",
+      "image": "../assets/chambre-4.png",
       "description": "Une chambre innovante utilisant les algues comme matériau isolant naturel, offrant une expérience unique en harmonie avec la mer.",
       "prix": 140,
       "capacite": 2,
@@ -91,7 +91,7 @@
     {
       "id": 5,
       "nom": "Le Nid de Posidonie",
-      "image": "../assets/chambre-1.png",
+      "image": "../assets/chambre-5.png",
       "description": "Une chambre inspirée des herbiers de posidonie, utilisant des matériaux biodégradables et des techniques de construction durables.",
       "prix": 160,
       "capacite": 2,
@@ -113,7 +113,7 @@
     {
       "id": 6,
       "nom": "La Grotte Marine",
-      "image": "../assets/chambre-1.png",
+      "image": "../assets/chambre-6.png",
       "description": "Une chambre unique creusée dans la roche naturelle, offrant une expérience immersive tout en respectant l'environnement.",
       "prix": 200,
       "capacite": 4,
