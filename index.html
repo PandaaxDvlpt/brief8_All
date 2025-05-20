@@ -3,75 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Hôtel Alizéa</title>
+    <meta name="description" content="Hôtel Alizéa - Votre havre de paix éco-responsable à Bora Bora. Découvrez nos chambres écologiques, notre restaurant local et nos services personnalisés pour un séjour inoubliable en Polynésie française.">
+    <meta name="keywords" content="hôtel Bora Bora, hôtel écologique, hébergement Polynésie, chambres éco-responsables, restaurant local, hôtel Alizéa, séjour Polynésie française">
+    <meta name="author" content="Hôtel Alizéa">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Hôtel Alizéa - Votre havre de paix à Bora Bora">
+    <meta property="og:description" content="Découvrez l'Hôtel Alizéa, un établissement éco-responsable offrant une expérience unique à Bora Bora. Chambres écologiques, restaurant local et services personnalisés.">
+    <meta property="og:image" content="./assets/img-ac.jpeg">
+    <meta property="og:url" content="https://hotel-alizea.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hôtel Alizéa - Votre havre de paix à Bora Bora">
+    <meta name="twitter:description" content="Découvrez l'Hôtel Alizéa, un établissement éco-responsable offrant une expérience unique à Bora Bora.">
+    <meta name="twitter:image" content="./assets/img-ac.jpeg">
+    <link rel="canonical" href="https://hotel-alizea.com">
+    <title>Hôtel Alizéa - Votre havre de paix éco-responsable à Bora Bora</title>
     <link rel="stylesheet" href="styles/global.css">
     <script src="./scripts/scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <img src="assets/logo.png" alt="logo" class="logo">
+        <nav class="navbar" role="navigation" aria-label="Menu principal">
+            <img src="assets/logo.png" alt="Logo Hôtel Alizéa" class="logo" width="50" height="50">
             <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div class="slider round">
-
-                    </div>
+                    <input type="checkbox" id="checkbox" aria-label="Changer le thème">
+                    <div class="slider round"></div>
                 </label>
             </div>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Menu mobile" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="navbar-list">
                 <li class="navlinks">
-                    <a href="/">Accueil</a>
-                    <a href="chambres.html">Hébergement</a>
-                    <a href="contact.html">Service</a>
+                    <a href="/" aria-current="page">Accueil</a>
+                    <a href="./pages/chambres.html">Hébergement</a>
                     <a href="#restauration">Restauration</a>
-                    <a href="celeb.html">Célébrités</a>
+                    <a href="./pages/celeb.html">Célébrités</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-
     <main>
         <section class="section-bg">
-            <img src="./assets/img-ac.jpeg" alt="bg" class="bg">
+            <img src="./assets/img-ac.jpeg" alt="Vue panoramique de l'Hôtel Alizéa sur le lagon de Bora Bora" class="bg" width="1920" height="1080">
             <div class="section-bg-content">
                 <h1><span>Bienvenue à l'Hôtel Alizéa</span></h1>
                 <p>Respirez. Reconnectez. Reposez-vous.</p>
                 <p id="rating"></p>
-                <div class="icons">
-                <svg width="50px" height="50px" viewBox="0 0 512 512" data-name="Слой 1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#cdccd2;}.cls-2{fill:#ffffff;}.cls-3{fill:#00d0f6;}</style></defs><title/><circle class="cls-1" cx="256" cy="252.35" r="207.77"/><circle class="cls-2" cx="256" cy="252.35" r="194.41"/><path class="cls-3" d="M368.17,185.44c0.64,3.46-22.09,22.65-22.09,22.65C303.29,430.51,152.51,318.66,152.51,318.66c36.35,5.19,65.5-18.14,65.5-18.14-37.92-4.39-41.35-30.39-41.35-30.39,7.62,3.32,20-.75,20-0.75-40.29-15.62-35.5-42.93-35.5-42.93,7.06,4.05,20,4.94,20,4.94-32.72-22.9-13.69-58.46-13.69-58.46,30.12,37.95,75.33,44.44,87.87,45.53a43.11,43.11,0,0,1-1.17-10.11c0-24.81,20.32-44.94,45.39-44.94a45.52,45.52,0,0,1,33.75,14.87l0.76,0.46,28.09-10.61c-1.24,10.84-18.34,23.4-19.42,24.2C344.06,191.79,367.55,182.07,368.17,185.44Z"/></svg>
-                <svg width="50px" height="50px" viewBox="0 0 512 512" data-name="Слой 1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs>
-                    <style>.cls-1{fill:#cdccd2;}.cls-2{fill:#ffffff;}.cls-3{opacity:0.79;}.cls-4{fill:url(#linear-gradient);}.cls-5{fill:url(#linear-gradient-2);}.cls-6{fill:url(#linear-gradient-3);}</style>
-                    <linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient" x1="305.31" x2="318.59" y1="210.09" y2="196.81">
-                    <stop offset="0" stop-color="#fbb03b"/>
-                    <stop offset="0.19" stop-color="#ea6d48"/>
-                    <stop offset="0.44" stop-color="#d4145a"/>
-                    <stop offset="0.64" stop-color="#bb0b5b"/>
-                    <stop offset="0.86" stop-color="#a6035d"/>
-                    <stop offset="1" stop-color="#9e005d"/>
-                    </linearGradient>
-                    <linearGradient id="linear-gradient-2" x1="172.97" x2="340.88" xlink:href="#linear-gradient" y1="337.59" y2="169.68"/>
-                    <linearGradient id="linear-gradient-3" x1="217.29" x2="295.71" xlink:href="#linear-gradient" y1="293.12" y2="214.7"/>
-                    </defs>
-                    <title/>
-                    <circle class="cls-1" cx="255" cy="256" r="207.77"/>
-                    <circle class="cls-2" cx="254.68" cy="256.04" r="194.41"/>
-                    <g class="cls-3">
-                    <circle class="cls-4" cx="311.95" cy="203.45" r="9.39"/>
-                    <path class="cls-5" d="M313.44,158H201.24C179.51,158,161,175.94,161,197.68v112.2c0,21.73,18.51,39.13,40.24,39.13h112.2c21.74,0,38.56-17.39,38.56-39.13V197.68C352,175.94,335.18,158,313.44,158ZM334,304.42A27.2,27.2,0,0,1,306.43,332H208.26C192.73,332,180,319.94,180,304.42V206.24A28.35,28.35,0,0,1,208.26,178h98.16C322,178,334,190.72,334,206.24v98.17Z"/>
-                    <path class="cls-6" d="M256.5,198.46a55.45,55.45,0,1,0,55.45,55.45A55.45,55.45,0,0,0,256.5,198.46Zm0,91.54a36.09,36.09,0,1,1,36.09-36.09A36.1,36.1,0,0,1,256.5,290Z"/>
-                    </g>
-                    </svg>
-                    <svg width="50px" height="50px" viewBox="0 0 512 512" data-name="Слой 1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#cdccd2;}.cls-2{fill:#ffffff;}.cls-3{fill:#4075bc;}.cls-4{fill:none;}</style></defs><title/><circle class="cls-1" cx="260" cy="252.51" r="207.77"/><circle class="cls-2" cx="259.95" cy="252.51" r="194.41"/><path class="cls-3" d="M306.91,182.76V151.35S223.76,132.54,234.4,232H202.24l0,36.69h32.12l0.06,95.38h38.73l-0.25-95.38h32.35L309.78,232H273.13s-11.31-57.33,30.63-46.77A2.54,2.54,0,0,0,306.91,182.76Z"/><rect class="cls-4" height="512" width="3172" x="-2128"/></svg>
+                <div class="icons" role="group" aria-label="Réseaux sociaux">
+                    <a href="https://twitter.com/hotelalizea" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <svg width="50" height="50" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                            <defs>
+                                <style>.cls-1{fill:#cdccd2;}.cls-2{fill:#ffffff;}.cls-3{fill:#00d0f6;}</style>
+                            </defs>
+                            <circle class="cls-1" cx="256" cy="252.35" r="207.77"/>
+                            <circle class="cls-2" cx="256" cy="252.35" r="194.41"/>
+                            <path class="cls-3" d="M368.17,185.44c0.64,3.46-22.09,22.65-22.09,22.65C303.29,430.51,152.51,318.66,152.51,318.66c36.35,5.19,65.5-18.14,65.5-18.14-37.92-4.39-41.35-30.39-41.35-30.39,7.62,3.32,20-.75,20-0.75-40.29-15.62-35.5-42.93-35.5-42.93,7.06,4.05,20,4.94,20,4.94-32.72-22.9-13.69-58.46-13.69-58.46,30.12,37.95,75.33,44.44,87.87,45.53a43.11,43.11,0,0,1-1.17-10.11c0-24.81,20.32-44.94,45.39-44.94a45.52,45.52,0,0,1,33.75,14.87l0.76,0.46,28.09-10.61c-1.24,10.84-18.34,23.4-19.42,24.2C344.06,191.79,367.55,182.07,368.17,185.44Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/hotelalizea" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg width="50" height="50" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                            <defs>
+                                <style>.cls-1{fill:#cdccd2;}.cls-2{fill:#ffffff;}.cls-3{opacity:0.79;}.cls-4{fill:url(#linear-gradient);}.cls-5{fill:url(#linear-gradient-2);}.cls-6{fill:url(#linear-gradient-3);}</style>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient" x1="305.31" x2="318.59" y1="210.09" y2="196.81">
+                                    <stop offset="0" stop-color="#fbb03b"/>
+                                    <stop offset="0.19" stop-color="#ea6d48"/>
+                                    <stop offset="0.44" stop-color="#d4145a"/>
+                                    <stop offset="0.64" stop-color="#bb0b5b"/>
+                                    <stop offset="0.86" stop-color="#a6035d"/>
+                                    <stop offset="1" stop-color="#9e005d"/>
+                                </linearGradient>
+                                <linearGradient id="linear-gradient-2" x1="172.97" x2="340.88" xlink:href="#linear-gradient" y1="337.59" y2="169.68"/>
+                                <linearGradient id="linear-gradient-3" x1="217.29" x2="295.71" xlink:href="#linear-gradient" y1="293.12" y2="214.7"/>
+                            </defs>
+                            <circle class="cls-1" cx="255" cy="256" r="207.77"/>
+                            <circle class="cls-2" cx="254.68" cy="256.04" r="194.41"/>
+                            <g class="cls-3">
+                                <circle class="cls-4" cx="311.95" cy="203.45" r="9.39"/>
+                                <path class="cls-5" d="M313.44,158H201.24C179.51,158,161,175.94,161,197.68v112.2c0,21.73,18.51,39.13,40.24,39.13h112.2c21.74,0,38.56-17.39,38.56-39.13V197.68C352,175.94,335.18,158,313.44,158ZM334,304.42A27.2,27.2,0,0,1,306.43,332H208.26C192.73,332,180,319.94,180,304.42V206.24A28.35,28.35,0,0,1,208.26,178h98.16C322,178,334,190.72,334,206.24v98.17Z"/>
+                                <path class="cls-6" d="M256.5,198.46a55.45,55.45,0,1,0,55.45,55.45A55.45,55.45,0,0,0,256.5,198.46Zm0,91.54a36.09,36.09,0,1,1,36.09-36.09A36.1,36.1,0,0,1,256.5,290Z"/>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/hotelalizea" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg width="50" height="50" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                            <defs>
+                                <style>.cls-1{fill:#cdccd2;}.cls-2{fill:#ffffff;}.cls-3{fill:#4075bc;}.cls-4{fill:none;}</style>
+                            </defs>
+                            <circle class="cls-1" cx="260" cy="252.51" r="207.77"/>
+                            <circle class="cls-2" cx="259.95" cy="252.51" r="194.41"/>
+                            <path class="cls-3" d="M306.91,182.76V151.35S223.76,132.54,234.4,232H202.24l0,36.69h32.12l0.06,95.38h38.73l-0.25-95.38h32.35L309.78,232H273.13s-11.31-57.33,30.63-46.77A2.54,2.54,0,0,0,306.91,182.76Z"/>
+                            <rect class="cls-4" height="512" width="3172" x="-2128"/>
+                        </svg>
+                    </a>
                 </div>
-                <button class="btn">Voir les chambres</button>
+                <a href="./pages/chambres.html" class="btn">Voir les chambres</a>
             </div>
         </section>
 
@@ -81,16 +111,15 @@
                 <div class="section-about-text">
                     <p class="section-description">Bienvenue dans notre univers inspiré par la perle du Pacifique : Alizéa.
 
-Née d’une passion commune pour les lagons turquoise, les plages de sable blanc et la culture polynésienne authentique, notre équipe s’est donné pour mission de vous faire découvrir Bora Bora comme jamais auparavant. Que vous soyez en quête de détente absolue, d’aventures sous-marines ou de moments romantiques inoubliables, nous sommes là pour vous guider dans chaque étape de votre voyage.
+Née d'une passion commune pour les lagons turquoise, les plages de sable blanc et la culture polynésienne authentique, notre équipe s'est donné pour mission de vous faire découvrir Bora Bora comme jamais auparavant. Que vous soyez en quête de détente absolue, d'aventures sous-marines ou de moments romantiques inoubliables, nous sommes là pour vous guider dans chaque étape de votre voyage.
 
-Nous ne proposons pas seulement une destination, mais une expérience immersive, façonnée par des experts amoureux de l’île. De l’hébergement en bungalow sur pilotis aux excursions privées en pirogue, chaque détail est pensé pour que votre séjour à Bora Bora soit aussi unique que mémorable.
-                    </p>
+Nous ne proposons pas seulement une destination, mais une expérience immersive, façonnée par des experts amoureux de l'île. De l'hébergement en bungalow sur pilotis aux excursions privées en pirogue, chaque détail est pensé pour que votre séjour à Bora Bora soit aussi unique que mémorable.</p>
                     <div class="section-about-grid">
-                        <div class="section-about-item">
-                            <img src="./assets/section-about.jpg" alt="about-img">
+                        <article class="section-about-item">
+                            <img src="./assets/section-about.jpg" alt="Chambre confortable de l'Hôtel Alizéa" width="500" height="300">
                             <h3>Chambre confortable</h3>
                             <p>Plongez dans une atmosphère chaleureuse.</p>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -100,70 +129,72 @@ Nous ne proposons pas seulement une destination, mais une expérience immersive,
             <h2 class="section-title">Restauration</h2>
             <div class="menu">
                 <article class="menu-item">
-                    <img src="./assets/poisson crue.jpg" alt="Poisson cru à la tahitienne">
+                    <img src="./assets/poisson crue.jpg" alt="Poisson cru à la tahitienne - Spécialité locale" width="400" height="300">
                     <div class="info">
                         <h3>Poisson cru à la tahitienne</h3>
                         <p class="price">18 €</p>
-                        <button class="bt">Ajouter au panier</button>
-                        <button class="bt reserve">Réserver</button>
+                        <button class="bt" aria-label="Ajouter le poisson cru au panier">Ajouter au panier</button>
+                        <button class="bt reserve" aria-label="Réserver le poisson cru">Réserver</button>
                     </div>
                 </article>
                 <article class="menu-item">
-                    <img src="./assets/poulet a la tahitienne.jpg" alt="Poulet fafa">
+                    <img src="./assets/poulet a la tahitienne.jpg" alt="Poulet fafa - Plat traditionnel polynésien" width="400" height="300">
                     <div class="info">
                         <h3>Poulet fafa</h3>
                         <p class="price">16 €</p>
-                        <button class="bt">Ajouter au panier</button>
-                        <button class="bt reserve">Réserver</button>
+                        <button class="bt" aria-label="Ajouter le poulet fafa au panier">Ajouter au panier</button>
+                        <button class="bt reserve" aria-label="Réserver le poulet fafa">Réserver</button>
                     </div>
                 </article>
                 <article class="menu-item">
-                    <img src="./assets/dessert coco.jpg" alt="Dessert coco-ananas">
+                    <img src="./assets/dessert coco.jpg" alt="Dessert coco-ananas - Spécialité sucrée locale" width="400" height="300">
                     <div class="info">
                         <h3>Dessert coco-ananas</h3>
                         <p class="price">9 €</p>
-                        <button class="bt">Ajouter au panier</button>
-                        <button class="bt reserve">Réserver</button>
+                        <button class="bt" aria-label="Ajouter le dessert coco-ananas au panier">Ajouter au panier</button>
+                        <button class="bt reserve" aria-label="Réserver le dessert coco-ananas">Réserver</button>
                     </div>
                 </article>
             </div>
         </section>
 
-    <section class="section-avis">
-        <h2 class="section-title">Avis de nos clients</h2>
-        <div class="avis-content">
-        </div>
-    </section>
-    <section class="section-contact">
-        <h2 class="section-title">Nous Contacter</h2>
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                <span class="validation-message"></span>
+        <section class="section-avis">
+            <h2 class="section-title">Avis de nos clients</h2>
+            <div class="avis-content" role="region" aria-label="Avis clients">
             </div>
-            
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-                <span class="validation-message"></span>
-            </div>
-            
-            <div class="form-group">
-                <label for="subject">Sujet</label>
-                <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required>
-                <span class="validation-message"></span>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-                <span class="validation-message"></span>
-            </div>
-            
-            <button type="submit" class="submit-btn">Envoyer le message</button>
-        </form>
-    </section>
+        </section>
+
+        <section class="section-contact">
+            <h2 class="section-title">Nous Contacter</h2>
+            <form class="contact-form" action="/contact" method="POST" aria-label="Formulaire de contact">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required aria-required="true">
+                    <span class="validation-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required aria-required="true">
+                    <span class="validation-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required aria-required="true">
+                    <span class="validation-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Votre message" required aria-required="true"></textarea>
+                    <span class="validation-message"></span>
+                </div>
+                
+                <button type="submit" class="submit-btn">Envoyer le message</button>
+            </form>
+        </section>
+    </main>
 
     <footer class="footer-section">
         <div class="footer-content">
@@ -171,7 +202,6 @@ Nous ne proposons pas seulement une destination, mais une expérience immersive,
             <p class="footer-text">Développé par <span class="footer-text-bold">Tony</span> & <span class="footer-text-bold">Dimitri</span></p>
         </div>
     </footer>
-    </main>
 </body>
 <script src="./scripts/app.js" defer></script>
 </html>

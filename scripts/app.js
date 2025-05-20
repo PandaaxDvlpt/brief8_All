@@ -59,6 +59,3 @@ async function displayData() {
 displayData();
 
 
-
-
-

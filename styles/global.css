@@ -122,13 +122,13 @@ body {
 .section-bg {
     position: relative;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: 100vh;
     overflow: hidden;
 }
 
 .bg {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -185,44 +185,31 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.btn {
+.btn, .bt, .reserve-btn {
     padding: 12px 30px;
-    background-color: var(--color-ocean);
+    background: linear-gradient(45deg, var(--color-ocean), var(--color-wave));
     color: white;
     border: none;
     border-radius: 25px;
     font-size: 1.1rem;
     cursor: pointer;
     transition: var(--trans-03);
+    text-align: center;
+    text-decoration: none;
 }
 
-.btn:hover {
-    background-color: var(--color-hover);
+.btn:hover, .bt:hover, .reserve-btn:hover {
     transform: scale(1.05);
-}
-
-.section-bg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.section-about {
-    padding: 80px 0;
-    background-color: var(--color-bg);
+    box-shadow: 0 5px 15px rgba(75, 166, 167, 0.3);
+    background: linear-gradient(45deg, var(--color-wave), var(--color-ocean));
 }
 
 .section-title {
     font-size: 2.8rem;
     color: var(--color-heading);
     text-align: center;
-    margin-bottom: 60px;
+    margin: 100px 0 60px;
     position: relative;
-    margin-top: 100px;
 }
 
 .section-title::after {
@@ -234,6 +221,11 @@ body {
     width: 80px;
     height: 3px;
     background-color: var(--color-ocean);
+}
+
+.section-about {
+    padding: 80px 0;
+    background-color: var(--color-bg);
 }
 
 .section-about-content {
@@ -383,7 +375,7 @@ body {
     width: calc(var(--switch-height) - (var(--switch-padding) * 2));
     left: var(--switch-padding);
     bottom: var(--switch-padding);
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     transition: var(--switch-transition);
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -964,6 +956,177 @@ input:checked + .slider .moon-icon {
     color: var(--color-sun);
     text-decoration: underline;
     text-underline-offset: 4px;
+}
+
+/* Styles pour la section chambres */
+.chambre-section {
+    padding: 80px 0;
+    background-color: var(--color-bg);
+}
+
+.chambre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.chambre-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.chambre-item {
+    background: white;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    transition: transform var(--trans-03);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 800px;
+}
+
+.chambre-item::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(
+        90deg,
+        var(--color-ocean) 0%,
+        var(--color-wave) 25%,
+        var(--color-sun) 50%,
+        var(--color-wave) 75%,
+        var(--color-ocean) 100%
+    );
+    border-radius: 17px;
+    z-index: -1;
+    animation: borderRotate 3s linear infinite;
+    background-size: 200% 100%;
+}
+
+.chambre-item::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: white;
+    border-radius: 13px;
+    z-index: -1;
+}
+
+.chambre-item:hover {
+    transform: translateY(-5px);
+}
+
+.chambre-item .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chambre-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    z-index: 2;
+}
+
+.chambre-item h3 {
+    font-size: 1.4rem;
+    color: var(--color-heading);
+    margin: 20px 20px 10px;
+}
+
+.chambre-item p {
+    color: var(--color-text);
+    margin: 0 20px 15px;
+    line-height: 1.6;
+}
+
+.chambre-item .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-ocean);
+    margin-bottom: 15px;
+}
+
+.chambre-item .equipements,
+.chambre-item .points-verts {
+    padding: 0 20px 20px;
+    flex: 1;
+}
+
+.chambre-item h4 {
+    color: var(--color-heading);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.chambre-item ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.chambre-item ul li {
+    color: var(--color-text);
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.chambre-item ul li::before {
+    content: '•';
+    color: var(--color-ocean);
+    position: absolute;
+    left: 0;
+}
+
+.chambre-item .reserve-btn {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, var(--color-ocean), var(--color-wave));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--trans-03);
+    text-align: center;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.chambre-item .reserve-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(75, 166, 167, 0.3);
+    background: linear-gradient(45deg, var(--color-wave), var(--color-ocean));
+}
+
+.chambre-item .reserve-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive pour les chambres */
+@media screen and (max-width: 992px) {
+    .chambre-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .chambre-card {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
 
 
