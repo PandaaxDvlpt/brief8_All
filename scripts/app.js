@@ -59,3 +59,63 @@ async function displayData() {
 displayData();
 
 
+async function fetchCelebrity() {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-Api-Key': 'QRGsZLLXuw3E4CnZ2LX7Ug==aG2el5R945B6jBi0',
+            'Content-Type': 'application/json'
+        }
+    };
+
+    const celebrities = [
+        'P Diddy',
+        'Gerard Depardieu',
+        'Kanye West',
+        'Jeffrey Epstein'
+    ];
+
+    try {
+        const promises = celebrities.map(celebrity => 
+            fetch(`https://api.api-ninjas.com/v1/celebrity?name=${encodeURIComponent(celebrity)}`, options)
+                .then(response => response.json())
+        );
+
+        const results = await Promise.all(promises);
+        return results.flat(); 
+    } catch (error) {
+        console.error('Erreur lors de la récupération des données', error);
+        return null;
+    }
+}
+
+async function displayCelebrity() {
+    const celebrities = await fetchCelebrity();
+    const celebContainer = document.querySelector('.celeb-card');
+    
+    if (celebrities && celebContainer) {
+        celebContainer.innerHTML = celebrities.map(celebrity => `
+            <div class="celeb-item">
+                <img src="${celebrity.image_url || 'https://via.placeholder.com/400x400?text=Célébrité'}" alt="${celebrity.name}">
+                <div class="content-wrapper">
+                    <h3>${celebrity.name}</h3>
+                    <p class="occupation">${celebrity.occupation || 'Profession non spécifiée'}</p>
+                    <p class="description">
+                        ${celebrity.description || 
+                        `${celebrity.name} est une personnalité ${celebrity.occupation ? `connue pour son travail en tant que ${celebrity.occupation}` : 'connue'}. 
+                        ${celebrity.net_worth ? `Sa fortune est estimée à ${celebrity.net_worth}.` : ''} 
+                        Une personnalité fascinante qui a marqué son époque.`}
+                    </p>
+                    ${celebrity.net_worth ? `<p class="net-worth">Fortune estimée : ${celebrity.net_worth}</p>` : ''}
+                    <a href="#" class="know-more-btn" onclick="showMoreInfo('${celebrity.name}')">En savoir plus</a>
+                </div>
+            </div>
+        `).join('');
+    }
+}
+
+function showMoreInfo(celebrityName) {
+    alert(`Plus d'informations sur ${celebrityName} seront bientôt disponibles !`);
+}
+
+displayCelebrity();

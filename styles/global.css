@@ -1129,5 +1129,161 @@ input:checked + .slider .moon-icon {
     }
 }
 
+/* Styles pour la section célébrités */
+.celeb-section {
+    padding: 80px 0;
+    background-color: var(--color-bg);
+}
+
+.celeb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.celeb-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.celeb-item {
+    background: white;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    transition: transform var(--trans-03);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 600px;
+}
+
+.celeb-item::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(
+        90deg,
+        var(--color-ocean) 0%,
+        var(--color-wave) 25%,
+        var(--color-sun) 50%,
+        var(--color-wave) 75%,
+        var(--color-ocean) 100%
+    );
+    border-radius: 17px;
+    z-index: -1;
+    animation: borderRotate 3s linear infinite;
+    background-size: 200% 100%;
+}
+
+.celeb-item::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: white;
+    border-radius: 13px;
+    z-index: -1;
+}
+
+.celeb-item:hover {
+    transform: translateY(-5px);
+}
+
+.celeb-item .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.celeb-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    z-index: 2;
+}
+
+.celeb-item h3 {
+    font-size: 2rem;
+    color: var(--color-heading);
+    margin-bottom: 15px;
+}
+
+.celeb-item .occupation {
+    font-size: 1.2rem;
+    color: var(--color-ocean);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.celeb-item .description {
+    color: var(--color-text);
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.celeb-item .net-worth {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-sun);
+    margin-bottom: 25px;
+}
+
+.celeb-item .know-more-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, var(--color-ocean), var(--color-wave));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--trans-03);
+    text-align: center;
+    text-decoration: none;
+    margin-top: auto;
+    width: fit-content;
+}
+
+.celeb-item .know-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(75, 166, 167, 0.3);
+    background: linear-gradient(45deg, var(--color-wave), var(--color-ocean));
+}
+
+/* Responsive pour les célébrités */
+@media screen and (max-width: 992px) {
+    .celeb-card {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .celeb-item img {
+        height: 300px;
+    }
+
+    .celeb-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .celeb-item .occupation {
+        font-size: 1.1rem;
+    }
+
+    .celeb-item .description {
+        font-size: 1rem;
+    }
+}
+
 
 
