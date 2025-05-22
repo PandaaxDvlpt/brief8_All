@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Hôtel Alizéa</title>
+    <link rel="stylesheet" href="../styles/global.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../assets/logo.png" alt="logo" class="logo">
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+
+                    </div>
+                </label>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-list">
+                <li class="navlinks">
+                    <a href="../index.html">Accueil</a>
+                    <a href="chambres.html">Hébergement</a>
+                    <a href="celeb.html">Célébrités</a>
+                    <a href="/">Restauration</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="section-bg">
+            <img src="../assets/img-ac.jpeg" alt="bg" class="bg">
+            <div class="section-bg-content">
+                <h1><span>Restauration</span></h1>
+            </div>
+        </section>
+
+        <section class="section-panier" id="services">
+            <h2 class="section-title">Notre Cuisine</h2>
+            <div class="menu">
+                <article class="menu-item">
+                    <img src="../assets/dessert coco.jpg" alt="Poisson cru à la tahitienne - Spécialité locale" width="400" height="300">
+                    <div class="info">
+                        <h3>Dessert Coco</h3>
+                        <p class="price">15 €</p>
+                        <button class="bt reserve" aria-label="Réserver le poisson cru">Réserver</button>
+                    </div>
+                </article>
+                <article class="menu-item">
+                    <img src="../assets/poisson crue.jpg" alt="Poulet fafa - Plat traditionnel polynésien" width="400" height="300">
+                    <div class="info">
+                        <h3>Poisson Crue</h3>
+                        <p class="price">15 €</p>
+                        <button class="bt reserve" aria-label="Réserver le poulet fafa">Réserver</button>
+                    </div>
+                </article>
+                <article class="menu-item">
+                    <img src="../assets/poulet a la tahitienne.jpg" alt="Dessert coco-ananas - Spécialité sucrée locale" width="400" height="300">
+                    <div class="info">
+                        <h3>Poulet Fafa</h3>
+                        <p class="price">25 €</p>
+                        <button class="bt reserve" aria-label="Réserver le dessert coco-ananas">Réserver</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section-panier" id="services">
+            <h2 class="section-title">Notre Restaurant</h2>
+            <div class="menu">
+                <article class="menu-item menu-item-restaurant">
+                    <img src="../assets/restauration.jpg" alt="boep" width="400" height="300">
+                    <div class="info restaurant-info">
+                        <button class="bt reserve">Réservez votre table</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    <footer class="footer-section">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2024 Hôtel Alizéa. Tous droits réservés.</p>
+            <p class="footer-text">Développé par <span class="footer-text-bold">Tony</span> & <span class="footer-text-bold">Dimitri</span></p>
+            <p class="footer-text">Langage Utilisés : <span class="footer-text-bold">HTML, CSS, JavaScript</span></p>
+        </div>
+    </footer>
+    </main>
+</body>
+
+<style>
+    .menu-item-restaurant {
+        width: 330%;
+    }
+
+</style>
+<script src="../scripts/app.js" defer></script>
+<script src="../scripts/scripts.js" defer></script>
+</html>
