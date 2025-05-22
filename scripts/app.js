@@ -120,9 +120,9 @@ function showMoreInfo(celebrityName) {
 
 displayCelebrity();
 
-// Initialisation d'EmailJS
+
 (function() {
-    emailjs.init("5aowvhw4yumZjI1Ia"); // Remplacez par votre clé publique EmailJS
+    emailjs.init("5aowvhw4yumZjI1Ia"); 
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const response = await emailjs.send(
                     "service_cnkipng", 
                     "template_u3051y4", 
-                    formData
+                    formData 
                 );
 
                 if (response.status === 200) {
