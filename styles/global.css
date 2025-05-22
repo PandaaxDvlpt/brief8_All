@@ -1354,12 +1354,4 @@ input:checked + .slider .moon-icon {
     display: none;
 }
 
-/* Style pour le captcha */
-.h-captcha {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-}
-
-
 

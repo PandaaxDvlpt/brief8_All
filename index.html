@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styles/global.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./scripts/scripts.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <header class="header-container">
@@ -40,8 +41,8 @@
                 <li class="navlinks">
                     <a href="/" aria-current="page">Accueil</a>
                     <a href="./pages/chambres.html">Hébergement</a>
-                    <a href="#restauration">Restauration</a>
                     <a href="./pages/celeb.html">Célébrités</a>
+                    <a href="./pages/restauration.html">Restauration</a>
                 </li>
             </ul>
         </nav>
@@ -125,33 +126,30 @@ Nous ne proposons pas seulement une destination, mais une expérience immersive,
             </div>
         </section>
 
-        <section class="section-panier" id="restauration">
-            <h2 class="section-title">Restauration</h2>
+        <section class="section-panier" id="services">
+            <h2 class="section-title">Services</h2>
             <div class="menu">
                 <article class="menu-item">
-                    <img src="./assets/poisson crue.jpg" alt="Poisson cru à la tahitienne - Spécialité locale" width="400" height="300">
+                    <img src="./assets/sortie en mer.jpg" alt="Poisson cru à la tahitienne - Spécialité locale" width="400" height="300">
                     <div class="info">
-                        <h3>Poisson cru à la tahitienne</h3>
-                        <p class="price">18 €</p>
-                        <button class="bt" aria-label="Ajouter le poisson cru au panier">Ajouter au panier</button>
+                        <h3>Sortie En Mer</h3>
+                        <p class="price">15 €</p>
                         <button class="bt reserve" aria-label="Réserver le poisson cru">Réserver</button>
                     </div>
                 </article>
                 <article class="menu-item">
-                    <img src="./assets/poulet a la tahitienne.jpg" alt="Poulet fafa - Plat traditionnel polynésien" width="400" height="300">
+                    <img src="./assets/peche en pirogue.jpg" alt="Poulet fafa - Plat traditionnel polynésien" width="400" height="300">
                     <div class="info">
-                        <h3>Poulet fafa</h3>
-                        <p class="price">16 €</p>
-                        <button class="bt" aria-label="Ajouter le poulet fafa au panier">Ajouter au panier</button>
+                        <h3>Pêche en pirogue</h3>
+                        <p class="price">25 €</p>
                         <button class="bt reserve" aria-label="Réserver le poulet fafa">Réserver</button>
                     </div>
                 </article>
                 <article class="menu-item">
-                    <img src="./assets/dessert coco.jpg" alt="Dessert coco-ananas - Spécialité sucrée locale" width="400" height="300">
+                    <img src="./assets/Services_massage.jpg" alt="Dessert coco-ananas - Spécialité sucrée locale" width="400" height="300">
                     <div class="info">
-                        <h3>Dessert coco-ananas</h3>
-                        <p class="price">9 €</p>
-                        <button class="bt" aria-label="Ajouter le dessert coco-ananas au panier">Ajouter au panier</button>
+                        <h3>Massage Traditionnel</h3>
+                        <p class="price">50 €</p>
                         <button class="bt reserve" aria-label="Réserver le dessert coco-ananas">Réserver</button>
                     </div>
                 </article>
@@ -190,8 +188,7 @@ Nous ne proposons pas seulement une destination, mais une expérience immersive,
                     <textarea id="message" name="message" placeholder="Votre message" required></textarea>
                     <span class="validation-message"></span>
                 </div>
-
-                <button type="submit" class="submit-btn">
+                <button type="submit" class="submit-btn" id="demo-form">
                     <span class="btn-text">Envoyer le message</span>
                     <span class="btn-loading" style="display: none;">Envoi en cours...</span>
                 </button>
