@@ -51,12 +51,12 @@ body {
     transition: var(--trans-05);
 }
 .navbar {
-    background-color: var(--color-ocean);
-    padding: 30px 20px;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    overflow: hidden;
+    padding: 50px 20px;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 120px;
 }
 
 .hamburger {
@@ -66,6 +66,10 @@ body {
     cursor: pointer;
     z-index: 100;
     padding: 5px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hamburger span {
@@ -76,17 +80,29 @@ body {
     transition: var(--trans-03);
 }
 
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
 .navbar-list {
-    display: flex;
-    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .navlinks {
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: end;
-    align-items: center;
 }
 
 .navlinks a {
@@ -96,27 +112,33 @@ body {
     transition: color 0.3s ease;    
     text-decoration: underline;
     text-underline-offset: 4px;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px black;
     
 }
 
 .navlinks a:hover {
-    color: var(--color-sun);
+    filter: drop-shadow(0 0 10px var(--color-sun));
+    
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     position: absolute;  
     left: 20px;         
     top: 50%;           
     transform: translateY(-50%);  
     cursor: pointer;
+    margin-top: 0;
+    transition: var(--trans-05);
 }
 
 .logo:hover {
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(0.9);
     transition: var(--trans-05);
+    filter: drop-shadow(0 0 10px var(--color-sun));
 }
 
 .section-bg {
@@ -124,15 +146,17 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    top: 0;
+    left: 0;
 }
 
 .bg {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
     top: 0;
     left: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 .section-bg-content {
@@ -633,21 +657,48 @@ input:checked + .slider .moon-icon {
         justify-content: center;
     }
 
-    /* Menu */
     .menu {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Avis */
     .avis-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 768px) {
-    /* Navbar */
+    .navbar {
+        padding: 20px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin: 0;
+    }
+
+    .theme-switch-wrapper {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin-left: 20px;
+    }
+
     .hamburger {
         display: flex;
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
+        margin-left: auto;
     }
 
     .navbar-list {
@@ -657,7 +708,7 @@ input:checked + .slider .moon-icon {
         width: 100%;
         height: 100vh;
         background-color: var(--color-ocean);
-        flex-direction: column;
+        display: flex;
         justify-content: center;
         align-items: center;
         transition: var(--trans-05);
@@ -671,30 +722,15 @@ input:checked + .slider .moon-icon {
     .navlinks {
         flex-direction: column;
         gap: 30px;
+        margin: 0;
+        text-align: center;
     }
 
     .navlinks a {
         font-size: 1.2rem;
+        color: white;
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    
-    .theme-switch-wrapper {
-        left: 80px;
-    }
-
-    
     .section-bg-content h1 {
         font-size: 2.5rem;
     }
@@ -711,13 +747,13 @@ input:checked + .slider .moon-icon {
         font-size: 1rem;
     }
 
-    /* Menu */
+
     .menu {
         grid-template-columns: 1fr;
         max-width: 400px;
     }
 
-    /* Avis */
+
     .avis-content {
         grid-template-columns: 1fr;
         max-width: 400px;
@@ -868,7 +904,7 @@ input:checked + .slider .moon-icon {
     transform: translateY(0);
 }
 
-/* Animation de succès */
+
 @keyframes successShake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
@@ -899,7 +935,7 @@ input:checked + .slider .moon-icon {
     color: #ff6b6b;
 }
 
-/* Responsive du formulaire */
+
 @media screen and (max-width: 768px) {
     .contact-form {
         padding: 30px 20px;
@@ -958,7 +994,7 @@ input:checked + .slider .moon-icon {
     text-underline-offset: 4px;
 }
 
-/* Styles pour la section chambres */
+
 .chambre-section {
     padding: 80px 0;
     background-color: var(--color-bg);
@@ -1114,7 +1150,7 @@ input:checked + .slider .moon-icon {
     transform: translateY(0);
 }
 
-/* Responsive pour les chambres */
+
 @media screen and (max-width: 992px) {
     .chambre-card {
         grid-template-columns: repeat(2, 1fr);
@@ -1129,7 +1165,6 @@ input:checked + .slider .moon-icon {
     }
 }
 
-/* Styles pour la section célébrités */
 .celeb-section {
     padding: 80px 0;
     background-color: var(--color-bg);
@@ -1258,7 +1293,6 @@ input:checked + .slider .moon-icon {
     background: linear-gradient(45deg, var(--color-wave), var(--color-ocean));
 }
 
-/* Responsive pour les célébrités */
 @media screen and (max-width: 992px) {
     .celeb-card {
         grid-template-columns: 1fr;
@@ -1283,6 +1317,48 @@ input:checked + .slider .moon-icon {
     .celeb-item .description {
         font-size: 1rem;
     }
+}
+
+.form-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-loading {
+    display: none;
+}
+
+/* Style pour le captcha */
+.h-captcha {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
 

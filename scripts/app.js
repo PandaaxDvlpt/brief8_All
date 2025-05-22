@@ -119,3 +119,62 @@ function showMoreInfo(celebrityName) {
 }
 
 displayCelebrity();
+
+// Initialisation d'EmailJS
+(function() {
+    emailjs.init("5aowvhw4yumZjI1Ia"); // Remplacez par votre clé publique EmailJS
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = form.querySelector('.submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+
+            try {
+                // Récupération des données du formulaire
+                const formData = {
+                    name: form.querySelector('#name').value,
+                    email: form.querySelector('#email').value,
+                    subject: form.querySelector('#subject').value,
+                    message: form.querySelector('#message').value
+                };
+
+                // Envoi de l'email via EmailJS
+                const response = await emailjs.send(
+                    "service_cnkipng", 
+                    "template_u3051y4", 
+                    formData
+                );
+
+                if (response.status === 200) {
+                    formStatus.style.display = 'block';
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = 'Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.';
+                    form.reset();
+                } else {
+                    throw new Error('Erreur lors de l\'envoi du message');
+                }
+            } catch (error) {
+                console.error('Erreur détaillée:', error);
+                formStatus.style.display = 'block';
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.';
+            } finally {
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+            }
+        });
+    }
+});
+
