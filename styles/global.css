@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-    --color-ocean: #4BA6A7;        /* Teal doux pour les éléments principaux */
+    --color-ocean: #4b68a7;        /* Teal doux pour les éléments principaux */
     --color-sand: #E6D3B3;         /* Beige sable pour les fonds ou les accents */
     --color-sun: #F3C17C;          /* Jaune pastel pour les détails lumineux */
     --color-wave: #86C4C6;         /* Bleu doux pour les bordures ou hover */
@@ -50,13 +50,17 @@ body {
     background-color: var(--color-bg);
     transition: var(--trans-05);
 }
+
 .navbar {
     overflow: hidden;
     padding: 50px 20px;
     position: absolute;
     z-index: 100;
     width: 100%;
-    height: 120px;
+    height: 100px;
+    background-color: var(--color-ocean);
+    position: fixed;
+
 }
 
 .hamburger {
@@ -84,6 +88,9 @@ body {
     transform: translateY(9px) rotate(45deg);
 }
 
+.menu-item1::before {
+    display: none;
+}
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
@@ -118,8 +125,8 @@ body {
 }
 
 .navlinks a:hover {
-    filter: drop-shadow(0 0 10px var(--color-sun));
-    
+    color: var(--color-hover);
+    transition: var(--trans-03);
 }
 
 .logo {
@@ -157,6 +164,7 @@ body {
     height: 100vh;
     width: 100%;
     object-fit: cover;
+    filter: blur(2px);
 }
 
 .section-bg-content {
@@ -280,7 +288,7 @@ body {
 
 .section-about-item {
     max-width: 500px;
-    background: white;
+    background: var(--color-bg);
     border-radius: 15px;
     overflow: visible;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -311,7 +319,6 @@ body {
     content: '';
     position: absolute;
     inset: 2px;
-    background: white;
     border-radius: 13px;
     z-index: -1;
     padding: 3px;
@@ -330,7 +337,6 @@ body {
 .section-about-item p {
     position: relative;
     z-index: 2;
-    background: white;
 }
 
 .section-about-item h3 {
@@ -593,7 +599,7 @@ input:checked + .slider .moon-icon {
     );
     border-radius: 17px;
     z-index: -1;
-    animation: borderRotate 3s linear infinite;
+    animation: borderRotate 10s linear infinite;
     background-size: 200% 100%;
 }
 
@@ -601,9 +607,9 @@ input:checked + .slider .moon-icon {
     content: '';
     position: absolute;
     inset: 2px;
-    background: white;
     border-radius: 13px;
     z-index: -1;
+    filter: blur(10px)
 }
 
 .avis-item .pdp {
@@ -672,6 +678,106 @@ input:checked + .slider .moon-icon {
         height: 100px;
         display: flex;
         align-items: center;
+        position: fixed;
+        background-color: var(--color-ocean);
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .navbar-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-ocean);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+    }
+
+    .navbar-list.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .navlinks {
+        flex-direction: column;
+        gap: 40px;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .navlinks a {
+        font-size: 2rem;
+        color: white;
+        padding: 15px 0;
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .navlinks a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--color-sun);
+        transition: width 0.3s ease;
+    }
+
+    .navlinks a:hover::after {
+        width: 50%;
+    }
+
+    .navlinks a:hover {
+        color: var(--color-sun);
+        transform: scale(1.05);
+    }
+
+    .hamburger {
+        display: flex;
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
+        margin-left: auto;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--color-sun);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--color-sun);
     }
 
     .logo {
@@ -692,45 +798,6 @@ input:checked + .slider .moon-icon {
         margin-left: 20px;
     }
 
-    .hamburger {
-        display: flex;
-        position: relative;
-        right: 0;
-        top: 0;
-        transform: none;
-        margin-left: auto;
-    }
-
-    .navbar-list {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--color-ocean);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: var(--trans-05);
-        z-index: 99;
-    }
-
-    .navbar-list.active {
-        right: 0;
-    }
-
-    .navlinks {
-        flex-direction: column;
-        gap: 30px;
-        margin: 0;
-        text-align: center;
-    }
-
-    .navlinks a {
-        font-size: 1.2rem;
-        color: white;
-    }
-
     .section-bg-content h1 {
         font-size: 2.5rem;
     }
@@ -747,12 +814,10 @@ input:checked + .slider .moon-icon {
         font-size: 1rem;
     }
 
-
     .menu {
         grid-template-columns: 1fr;
         max-width: 400px;
     }
-
 
     .avis-content {
         grid-template-columns: 1fr;
@@ -904,7 +969,6 @@ input:checked + .slider .moon-icon {
     transform: translateY(0);
 }
 
-
 @keyframes successShake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
@@ -934,7 +998,6 @@ input:checked + .slider .moon-icon {
 .validation-message.error {
     color: #ff6b6b;
 }
-
 
 @media screen and (max-width: 768px) {
     .contact-form {
@@ -993,7 +1056,6 @@ input:checked + .slider .moon-icon {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
-
 
 .chambre-section {
     padding: 80px 0;
@@ -1149,7 +1211,6 @@ input:checked + .slider .moon-icon {
 .chambre-item .reserve-btn:active {
     transform: translateY(0);
 }
-
 
 @media screen and (max-width: 992px) {
     .chambre-card {
